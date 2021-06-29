@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X & 0's</title>
+
+    <link href="./css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <script>
+
+        var turn = 1;
+        function playerAction(elem) {
+
+            if (turn == 1) {
+                elem.innerHTML = "X";
+                document.getElementById("message").innerHTML = "Player 2's turn";
+                turn = 2;
+            }
+            else if (turn == 2) {
+                elem.innerHTML = "O";
+                document.getElementById("message").innerHTML = "Player 1's turn";
+                turn = 1;
+            }
+        }
+
+    </script>
+
+    <div class="message" id="message"> Player 1's Turn </div>
+    <div class="game">
+
+        <div class="row">
+            <div class="col" onclick="playerAction(this)"></div>
+            <div class="col" onclick="playerAction(this)"></div>
+            <div class="col" onclick="playerAction(this)"></div>
+        </div>
+
+        <div class="row">
+            <div class="col" onclick="playerAction(this)"></div>
+            <div class="col" onclick="playerAction(this)"></div>
+            <div class="col" onclick="playerAction(this)"> </div>
+        </div>
+
+        <div class="row">
+            <div class="col" onclick="playerAction(this)"></div>
+            <div class="col" onclick="playerAction(this)"></div>
+            <div class="col" onclick="playerAction(this)"></div>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
